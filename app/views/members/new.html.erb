@@ -1,8 +1,15 @@
 <%= form_with model: @member, local: true do |f| %>
   <div class="starting_member">
     スタメンを発表する
-    <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    <div class="one_batter">
+    1番
+    </div>
+    <div class="position">
+    守備<%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+    </div>
+    <div class="player">
+    選手名<%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    </div>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>

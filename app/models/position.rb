@@ -15,4 +15,4 @@ class Position < ActiveHash::Base
   include ActiveHash::Associations
   has_many :members
 
-  end
+end
