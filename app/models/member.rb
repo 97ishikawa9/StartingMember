@@ -3,6 +3,6 @@ class Member < ApplicationRecord
   belongs_to :position
   belongs_to :name
 
-  validates :one_name_id, numericality: { other_than: 1 }
-  validates :one_position_id, numericality: { other_than: 1 }
+  validates :name_id, numericality: { other_than: 1 }
+  validates :position_id, numericality: { other_than: 1 }
 end

@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   def index
-    @members = Member.order("created_at DESC")
+    @members = Member.all
   end
 
   def new
@@ -9,7 +9,7 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new(member_params)
-    if @article.save
+    if @member.save
       redirect_to root_path
     else
       render :new
@@ -19,7 +19,7 @@ class MembersController < ApplicationController
   private
 
   def member_params
-    params.require(:member).permit(:one_name_id, :one_position_id)
+    params.require(:member).permit(:name_id, :position_id)
   end
 
 end

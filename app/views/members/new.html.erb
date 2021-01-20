@@ -1,8 +1,8 @@
 <%= form_with model: @member, local: true do |f| %>
   <div class="starting_member">
     スタメンを発表する
-    <%= f.collection_select(:one_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:one_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    <%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+    <%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>

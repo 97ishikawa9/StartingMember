@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2021_01_19_140526) do
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "one_position_id", null: false
-    t.integer "one_name_id", null: false
+    t.integer "position_id", null: false
+    t.integer "name_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
