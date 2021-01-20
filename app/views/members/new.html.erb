@@ -1,24 +1,8 @@
-<%= form_with model: @member, url:new_members_path, local: true do |f| %>
+<%= form_with model: @member, local: true do |f| %>
   <div class="starting_member">
     スタメンを発表する
     <%= f.collection_select(:one_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
     <%= f.collection_select(:one_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
-    <%= f.collection_select(:two_position_id, Position.all, :id, :name, {}, {class:"position-select"} ) %> 
-    <%= f.collection_select(:two_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:three_position_id, Position.all, :id, :name, {}, {class:"position-select"} ) %>) 
-    <%= f.collection_select(:three_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
-    <%= f.collection_select(:four_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:four_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:five_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:five_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:six_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:six_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:seven_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:seven_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:eight_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:eight_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
-    <%= f.collection_select(:nine_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
-    <%= f.collection_select(:nine_name_id, Name.all, :id, :name, {}, {class:"name-select"} %>
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>
