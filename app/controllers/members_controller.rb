@@ -19,7 +19,7 @@ class MembersController < ApplicationController
   private
 
   def member_params
-    params.require(:member).permit(:name_id, :position_id)
+    params.require(:member).permit(:team_id, :name_id, :position_id)
   end
 
 end

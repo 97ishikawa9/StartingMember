@@ -4,6 +4,7 @@
 <div class="contents row">
   <% @members.each do |member| %>
     <div class="content_post">
+      <p><%= member.team.name %></p>
       <p>|1(<%= member.position.name %>) <%= member.name.name %>|
     </div>
   <% end %>

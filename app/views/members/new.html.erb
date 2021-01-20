@@ -1,6 +1,9 @@
 <%= form_with model: @member, local: true do |f| %>
   <div class="starting_member">
     スタメンを発表する
+    <div class="team">
+    球団<%= f.collection_select(:team_id, Team.all, :id, :name, {}, {class:"team-select"}) %>
+    </div>
     <div class="one_batter">
     1番
     </div>
