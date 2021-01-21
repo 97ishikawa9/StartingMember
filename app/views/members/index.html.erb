@@ -5,8 +5,7 @@
   <% @members.each do |member| %>
     <div class="content_post">
       <p><%= member.team.name %></p>
-      <p>|1(<%= member.position.name %>) <%= member.name.name %>|
-      <p>|2(<%= member.two_position.name %>) <%= member.two_name.name %>|
+      <p>|1(<%= member.position.name %>) <%= member.name.name %>|2(<%= member.two_position.name %>) <%= member.two_name.name %>|</p>
     </div>
   <% end %>
 </div>
