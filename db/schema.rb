@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2021_01_19_140526) do
     t.integer "team_id", null: false
     t.integer "position_id", null: false
     t.integer "name_id", null: false
+    t.integer "two_position_id", null: false
+    t.integer "two_name_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -13,6 +13,18 @@
     <div class="player">
     選手名<%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
     </div>
+    
+    <div class="two_batter">
+    2番
+    </div>
+    <div class="position">
+    守備<%= f.collection_select(:two_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+    </div>
+    <div class="player">
+    選手名<%= f.collection_select(:two_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    </div>
+
+
     <%= f.submit "投稿する" ,class:"btn" %>
   </div>
 <% end %>
