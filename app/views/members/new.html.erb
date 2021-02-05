@@ -1,27 +1,27 @@
 <%= form_with model: @member, local: true do |f| %>
   <div class="starting_member">
-    スタメンを発表する
+    <h1>スタメンを発表する</h1>
     <div class="team">
-    球団<%= f.collection_select(:team_id, Team.all, :id, :name, {}, {class:"team-select"}) %>
+    <h2>球団</h2><%= f.collection_select(:team_id, Team.all, :id, :name, {}, {class:"team-select"}) %>
     </div>
     <div class="one_batter">
-    1番
+    <h3>1番の選手</h3>
     </div>
     <div class="position">
-    守備<%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+    <h3>守備位置</h3><%= f.collection_select(:position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
     </div>
     <div class="player">
-    選手名<%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    <h3>選手名</h3><%= f.collection_select(:name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
     </div>
     
     <div class="two_batter">
-    2番
+    <h3>2番の選手</h3>
     </div>
     <div class="position">
-    守備<%= f.collection_select(:two_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
+    <h3>守備位置</h3><%= f.collection_select(:two_position_id, Position.all, :id, :name, {}, {class:"position-select"}) %>
     </div>
     <div class="player">
-    選手名<%= f.collection_select(:two_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
+    <h3>選手名</h3><%= f.collection_select(:two_name_id, Name.all, :id, :name, {}, {class:"name-select"} ) %>
     </div>
 
 
