@@ -14,24 +14,10 @@ ActiveRecord::Schema.define(version: 2021_01_19_140526) do
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "team_id", null: false
-    t.integer "one_position_id", null: false
-    t.integer "one_name_id", null: false
+    t.integer "position_id", null: false
+    t.integer "name_id", null: false
     t.integer "two_position_id", null: false
     t.integer "two_name_id", null: false
-    t.integer "three_position_id", null: false
-    t.integer "three_name_id", null: false
-    t.integer "four_positon_id", null: false
-    t.integer "four_name_id", null: false
-    t.integer "five_position_id", null: false
-    t.integer "five_name_id", null: false
-    t.integer "six_position_id", null: false
-    t.integer "six_name_id", null: false
-    t.integer "seven_position_id", null: false
-    t.integer "seven_name_id", null: false
-    t.integer "eight_position_id", null: false
-    t.integer "eight_name_id", null: false
-    t.integer "nine_position_id", null: false
-    t.integer "nine_name_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
